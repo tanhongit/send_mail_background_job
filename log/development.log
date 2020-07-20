@@ -889,3 +889,75 @@ Content-Transfer-Encoding: 7bit
 </html>
 
 [ActiveJob] [SendEmailJob] [595f0cdc-4781-4e6f-be29-d1d6b1e19096] Performed SendEmailJob (Job ID: 595f0cdc-4781-4e6f-be29-d1d6b1e19096) from Sidekiq(default) in 6734.66ms
+Started GET "/users/new" for ::1 at 2020-07-20 20:01:02 +0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2007)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 39ms (Views: 26.0ms | ActiveRecord: 0.6ms | Allocations: 22400)
+
+
+Started POST "/users" for ::1 at 2020-07-20 20:01:39 +0700
+Processing by UsersController#create as HTML
+  Parameters: {"authenticity_token"=>"Z0LcVcut9tXqTle2xTw3kaZWlpA+veGoYObRZyTBtESI3FWsVQXd4JfAadYF2ipgjM8319SMwRLjks4/MKinTw==", "user"=>{"name"=>"fsgr", "email"=>"phtan12357@gmail.com"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "fsgr"], ["email", "phtan12357@gmail.com"], ["created_at", "2020-07-20 13:01:39.133178"], ["updated_at", "2020-07-20 13:01:39.133178"]]
+  ↳ app/controllers/users_controller.rb:8:in `create'
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/users_controller.rb:8:in `create'
+[ActiveJob] Enqueued SendEmailJob (Job ID: 6d07e90d-edba-47d8-bcf4-28ce954204c6) to Sidekiq(default) at 2020-07-20 13:06:39 UTC with arguments: #<GlobalID:0x000055aa3f6547f0 @uri=#<URI::GID gid://send-mail-background-job/User/4>>
+Redirected to http://localhost:3000/users/new
+Completed 302 Found in 18ms (ActiveRecord: 3.8ms | Allocations: 9435)
+
+
+Started GET "/users/new" for ::1 at 2020-07-20 20:01:39 +0700
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 0.9ms | Allocations: 414)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 3972)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[ActiveJob] [SendEmailJob] [6d07e90d-edba-47d8-bcf4-28ce954204c6] Performing SendEmailJob (Job ID: 6d07e90d-edba-47d8-bcf4-28ce954204c6) from Sidekiq(default) enqueued at 2020-07-20T13:01:39Z with arguments: #<GlobalID:0x0000564649c71038 @uri=#<URI::GID gid://send-mail-background-job/User/4>>
+[ActiveJob] [SendEmailJob] [6d07e90d-edba-47d8-bcf4-28ce954204c6]   Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+[ActiveJob] [SendEmailJob] [6d07e90d-edba-47d8-bcf4-28ce954204c6]   Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.4ms | Allocations: 199)
+[ActiveJob] [SendEmailJob] [6d07e90d-edba-47d8-bcf4-28ce954204c6] UserMailer#welcome_email: processed outbound mail in 3.3ms
+[ActiveJob] [SendEmailJob] [6d07e90d-edba-47d8-bcf4-28ce954204c6] Delivered mail 5f159a28e971d_d4a13bb0226b2@tanhong-Precision-M4700.mail (6888.1ms)
+[ActiveJob] [SendEmailJob] [6d07e90d-edba-47d8-bcf4-28ce954204c6] Date: Mon, 20 Jul 2020 20:20:40 +0700
+From: henrywingard@my.smccd.edu
+To: phtan12357@gmail.com
+Message-ID: <5f159a28e971d_d4a13bb0226b2@tanhong-Precision-M4700.mail>
+Subject: Welcome to Website
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <h1>Hello, welcome to my site</h1>
+  </body>
+</html>
+  </body>
+</html>
+
+[ActiveJob] [SendEmailJob] [6d07e90d-edba-47d8-bcf4-28ce954204c6] Performed SendEmailJob (Job ID: 6d07e90d-edba-47d8-bcf4-28ce954204c6) from Sidekiq(default) in 6902.99ms

@@ -1,0 +1,4 @@
+run:
+rails s
+sudo systemctl status redis
+bundle exec sidekiq
