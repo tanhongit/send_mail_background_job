@@ -55,3 +55,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "figaro"
 # bundle exec figaro install
+
+gem "sidekiq", '6.0.2'
+# bundle exec sidekiq
