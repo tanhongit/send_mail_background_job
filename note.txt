@@ -2,3 +2,8 @@ run:
 rails s
 sudo systemctl status redis
 bundle exec sidekiq
+
+
+https://viblo.asia/p/tim-hieu-ve-sidekiq-va-ung-dung-gui-mail-1VgZvP7m5Aw
+https://techblog.vn/rails-question-nhat-vy-part-2-bai-toan-gui-mail-chuc-mung-sinh-nhat-duoi-dang-background-job-trong-rails
+https://viblo.asia/p/rails-question-nhat-vy-part-2-bai-toan-gui-mail-chuc-mung-sinh-nhat-duoi-dang-background-job-trong-rails-naQZRYXQKvx
