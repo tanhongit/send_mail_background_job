@@ -1,6 +1,6 @@
-# Welcome to Rails 6 Send Mail Backgtound Jpb with gem sidekiq
+# Welcome to Rails 6 Send Mail Backgtound Job with gem sidekiq
 
-The Rails 6  Send Mail Backgtound Jpb is a small task for everyone to practice more when programming with Ruby on Rails.
+The Rails 6  Send Mail Backgtound Job is a small task for everyone to practice more when programming with Ruby on Rails.
 
 We will use gem sidekiq to perform this task.
 
