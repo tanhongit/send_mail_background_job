@@ -1,24 +1,28 @@
-# README
+# Welcome to Rails 6 Send Mail Backgtound Jpb with gem sidekiq
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Rails 6  Send Mail Backgtound Jpb is a small task for everyone to practice more when programming with Ruby on Rails.
 
-Things you may want to cover:
+We will use gem sidekiq to perform this task.
 
-* Ruby version
+## Support for me
+Support this project :stuck_out_tongue_winking_eye: :pray:
+<p align="center">
+    <a href="https://www.paypal.me/tanhongit" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-green.svg" data-origin="https://img.shields.io/badge/Donate-PayPal-green.svg" alt="PayPal buymeacoffee TanHongIT"></a>
+</p>
 
-* System dependencies
+# 1. Technology
+- Ruby on Rails
 
-* Configuration
+# 2. Configuration requirements
+We are going to build the web application using:
+- Rails 6.0.3.2
+- Ruby 2.7.1
 
-* Database creation
+# 4. What is background Job
+Since you already know the call to your Application will be slow, you want it to happen in a background job, so that users can see the confirmation message in their browser immediately without having to wait for the charge to actually happen. To do this, you must create an Active Job class, implement that class to call charge!(), and then add code to the controller to execute this job. The flow looks like the following figure.
 
-* Database initialization
+![Image](https://imgur.com/Ns3P04e.png)
 
-* How to run the test suite
+# 5. Demo
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![Image](https://imgur.com/xON93Xa.png)
