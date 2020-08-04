@@ -23,6 +23,30 @@ Since you already know the call to your Application will be slow, you want it to
 
 ![Image](https://imgur.com/Ns3P04e.png)
 
-# 5. Demo
+# 5. Runing
+
+## 5.1. Clone Repo
+
+```
+$ git clone https://github.com/TanHongIT/send_mail_background_job
+$ cd send_mail_background_job
+```
+
+## 5.1. Change your mail
+
+Go to config directory end edit file "application.yml"
+
+```
+user_mail: 'yourmail@gmail.com'
+password: 'your password'
+```
+
+## 5.3. Run server 
+
+```
+rails s
+```
+
+# 6. Demo
 
 ![Image](https://imgur.com/xON93Xa.png)
