@@ -55,29 +55,29 @@ default: &default
   adapter: postgresql
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
-  username: ruby_on_rails_6_shop
+  username: send_mail_background_job
   password: 1234
   host: localhost
 
 # tutorial for ubuntu linux:
 # sudo -u postgres psql
-# create user "ruby_on_rails_6_shop" with password '1234';  
-# create database "ruby_on_rails_6_shop" owner "ruby_on_rails_6_shop"; 
+# create user "send_mail_background_job" with password '1234';  
+# create database "send_mail_background_job" owner "send_mail_background_job"; 
 
 development:
   <<: *default
-  database: ruby_on_rails_6_shop_6
+  database: send_mail_background_job
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: ruby_on_rails_6_shop_test
+  database: send_mail_background_job_test
 
 production:
   <<: *default
-  database: ruby_on_rails_6_shop_production
+  database: send_mail_background_job_production
 ```
 
 ### 5.5. run rails db:migrate
