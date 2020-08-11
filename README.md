@@ -32,16 +32,76 @@ $ git clone https://github.com/TanHongIT/send_mail_background_job
 $ cd send_mail_background_job
 ```
 
-## 5.1. Change your mail
+### 5.2. Bundle Install 
 
-Go to config directory end edit file "application.yml"
+```
+$ bundle install
+```
+
+### 5.3. Yarn Install 
+
+```
+$ yarn install
+```
+
+### 5.4. Create database with Postgresql
+
+You must change the appropriate database configuration
+
+Change configuration at _"config/database.yml"_ with Postgresql.
+
+```ruby
+default: &default
+  adapter: postgresql
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  timeout: 5000
+  username: ruby_on_rails_6_shop
+  password: 1234
+  host: localhost
+
+# tutorial for ubuntu linux:
+# sudo -u postgres psql
+# create user "ruby_on_rails_6_shop" with password '1234';  
+# create database "ruby_on_rails_6_shop" owner "ruby_on_rails_6_shop"; 
+
+development:
+  <<: *default
+  database: ruby_on_rails_6_shop_6
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: ruby_on_rails_6_shop_test
+
+production:
+  <<: *default
+  database: ruby_on_rails_6_shop_production
+```
+
+### 5.5. run rails db:migrate
+
+```
+$ rails db:migrate
+```
+
+### 5.6. Change your mail
+
+Run console :
+
+```
+$ bundle exec figaro install
+```
+
+Go to config directory and add to file "config/application.yml"
 
 ```
 user_mail: 'yourmail@gmail.com'
-password: 'your password'
+user_password: 'your password'
 ```
 
-## 5.3. Run server 
+### 5.7. Run server 
 
 ```
 rails s
