@@ -109,6 +109,8 @@ $ bundle exec sidekiq
 
 ### 5.8. Run server 
 
+Open new terminal and run:
+
 ```
 rails s
 ```
