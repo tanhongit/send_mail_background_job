@@ -98,14 +98,22 @@ Go to config directory and add to file "config/application.yml"
 
 ```
 user_mail: 'yourmail@gmail.com'
-user_password: 'your password'
+password: 'your password'
 ```
 
-### 5.7. Run server 
+### 5.7. Run sidekiq
+
+```
+$ bundle exec sidekiq
+```
+
+### 5.8. Run server 
 
 ```
 rails s
 ```
+
+Now go to at http://localhost:3000/users/new and put your mail 
 
 # 6. Demo
 
