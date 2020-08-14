@@ -80,6 +80,8 @@ production:
   database: send_mail_background_job_production
 ```
 
+You must change the username, password and database name accordingly
+
 ### 5.5. run rails db:migrate
 
 ```
