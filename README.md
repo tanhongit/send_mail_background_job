@@ -80,7 +80,7 @@ production:
   database: send_mail_background_job_production
 ```
 
-You must change the username, password and database name accordingly
+You must change the username, password and database name accordingly!
 
 ### 5.5. run rails db:migrate
 
@@ -96,11 +96,20 @@ Run console :
 $ bundle exec figaro install
 ```
 
-Go to config directory and add to file "config/application.yml"
+Go to config directory and add to file **"config/application.yml"**
 
-```
+```ruby
 user_mail: 'yourmail@gmail.com'
 password: 'your password'
+```
+
+Change your mail in **app/mailers/application_mailer.rb** 
+
+```ruby
+class ApplicationMailer < ActionMailer::Base
+  default from: 'your_mail'
+  layout 'mailer'
+end
 ```
 
 ### 5.7. Run sidekiq
@@ -117,7 +126,7 @@ Open new terminal and run:
 rails s
 ```
 
-Now go to at http://localhost:3000/users/new and put your mail 
+Now go to at http://localhost:3000/users/new and put your mail end waiting for a response to arrive
 
 # 6. Demo
 
