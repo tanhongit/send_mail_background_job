@@ -131,3 +131,7 @@ Now go to at http://localhost:3000/users/new and put your mail end waiting for a
 # 6. Demo
 
 ![Image](https://imgur.com/xON93Xa.png)
+
+<p align="center">
+     <img src="https://img.shields.io/packagist/l/doctrine/orm.svg" data-origin="https://img.shields.io/packagist/l/doctrine/orm.svg" alt="license">
+</p>
